@@ -213,3 +213,26 @@ function reiniciarJogo() {
     
     desenhar();
 }
+
+
+document.addEventListener("keydown", 
+    function(evento) {
+    var tecla = evento.key;
+    if (tecla == 13) { 
+    pausarJogo();
+    } else {
+    if (loop.rodando) {
+    if (tecla == 37) { 
+    nave.esquerda(50);
+    } else if (tecla == 39) { 
+    nave.direita(50);
+    } else if (tecla == 38) { 
+    nave.subir(30);
+    } else if (tecla == 40) { 
+    nave.descer(30);
+    } else if (tecla == 32) { 
+    nave.atirar();
+    }
+    }
+    }
+    });
